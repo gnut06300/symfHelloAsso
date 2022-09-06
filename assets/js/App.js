@@ -7,8 +7,9 @@ import "../styles/app.css";
 export default function App() {
     
     return (
-        <div className="app">Hello React</div>
+        <div className="app">Hello Reactjs</div>
     );
 }
 
 const rootElement = document.getElementById("app");
+ReactDOM.render(<App />, rootElement);
