@@ -1,0 +1,15 @@
+.home {
+    /* background-color: rgb(255, 255, 255); */
+    /* background-color: var(--color-primary); */
+    padding: 0 0 50px 0;
+}
+.banner {
+    width: 100%;
+}
+.titre {
+    text-align: center;
+}
+.description {
+    font-size: 18px;
+    margin: 10px 10px 10px 30px;
+}
