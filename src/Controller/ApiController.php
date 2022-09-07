@@ -2,19 +2,22 @@
 
 namespace App\Controller;
 
+use App\Services\CallApiService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-
+#[Route('/api')]
 class ApiController extends AbstractController
 {
-    //route php 8
-    #[Route('/', name: 'api', methods: ['GET'],defaults: ['reactRouting' => null])]
-    public function index(): Response
+    
+    #[Route('/login', name: 'api', methods: ['GET'],defaults: ['reactRouting' => null])]
+    public function index(CallApiService $service): Response
     {
-        return $this->render('api/index.html.twig', [
-            'controller_name' => 'ApiController',
-        ]);
+        $org = $service->getAccessToken();
+        dd($org);
+        return $this->json($org);
     }
+
+    
 }

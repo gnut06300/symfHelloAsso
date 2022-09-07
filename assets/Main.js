@@ -10,6 +10,7 @@ import Login from "./js/Views/Login";
 import DashBoard from "./js/Views/DashBoard";
 //components
 import Navigation from "./js/Components/Navigation";
+import Footer from "./js/Components/Footer";
 
 
 
@@ -27,7 +28,7 @@ export default function Main() {
                     <Route path="/dashboard" element={<DashBoard />} />
                 </Routes>
             </Router>
-
+            <Footer/>
         </div>
     );
 }
