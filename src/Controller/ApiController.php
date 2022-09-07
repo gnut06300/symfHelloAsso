@@ -7,17 +7,32 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-#[Route('/api')]
+#[Route('/api', name: 'api_')]
 class ApiController extends AbstractController
 {
+    #[Route('/', name: 'api', methods: ['GET'],defaults: ['reactRouting' => null])]
+    public function index(): Response
+    {
+        return $this->render('api/index.html.twig');
+    }
+
     
-    #[Route('/login', name: 'api', methods: ['GET'],defaults: ['reactRouting' => null])]
-    public function index(CallApiService $service): Response
+    #[Route('/login', name: 'login', methods: ['GET'],defaults: ['reactRouting' => null])]
+    public function login(CallApiService $service): Response
     {
         $org = $service->getAccessToken();
-        dd($org);
+        // dd($org);
         return $this->json($org);
     }
+
+    #[Route('/org', name: 'org', methods: ['GET'],defaults: ['reactRouting' => null])]
+    public function org(CallApiService $service): Response
+    {
+        $org = $service->getAssociationInfo();
+        // dd($org);
+        return $this->json($org);
+    }
+
 
     
 }
