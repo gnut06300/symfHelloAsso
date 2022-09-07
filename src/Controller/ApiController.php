@@ -7,7 +7,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-#[Route('/api', name: 'api_')]
+
 class ApiController extends AbstractController
 {
     #[Route('/', name: 'api', methods: ['GET'],defaults: ['reactRouting' => null])]
@@ -17,7 +17,7 @@ class ApiController extends AbstractController
     }
 
     
-    #[Route('/login', name: 'login', methods: ['GET'],defaults: ['reactRouting' => null])]
+    #[Route('/api/login', name: 'login', methods: ['GET'],defaults: ['reactRouting' => null])]
     public function login(CallApiService $service): Response
     {
         $org = $service->getAccessToken();
@@ -25,7 +25,7 @@ class ApiController extends AbstractController
         return $this->json($org);
     }
 
-    #[Route('/org', name: 'org', methods: ['GET'],defaults: ['reactRouting' => null])]
+    #[Route('/api/org', name: 'org', methods: ['GET'],defaults: ['reactRouting' => null])]
     public function org(CallApiService $service): Response
     {
         $org = $service->getAssociationInfo();
