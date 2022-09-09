@@ -28,6 +28,14 @@ root.render(
             </Routes>
         </Router>
         <Footer/>
+<<<<<<< HEAD
      </React.StrictMode>
 </div>
 );
+=======
+    </React.StrictMode>
+</div>
+);
+
+
+>>>>>>> f51fb04dc38e12184c40bbaa3953e0b765d6b3a8

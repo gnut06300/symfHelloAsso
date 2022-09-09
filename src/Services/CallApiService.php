@@ -55,10 +55,18 @@ class CallApiService {
         $statusCode = $resp->getStatusCode();  
         if ($statusCode == 200) {
             $content = $resp->toArray();
-            // dd($content);
+            dd($content);
             return $content;
         } else {
             return [];
         }
     }
+
+    //refresh token every 30 minutes if the access_token is expired
+    // public function refreshToken(): array 
+    // {
+        
+      
+        
+    // }
 }
