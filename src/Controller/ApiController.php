@@ -26,7 +26,7 @@ class ApiController extends AbstractController
         return $this->json($org);
     }
 
-    #[Route('/', name: 'org', methods: ['GET'],defaults: ['reactRouting' => null])]
+    #[Route('/api/org', name: 'org', methods: ['GET'],defaults: ['reactRouting' => null])]
     public function org(CallApiService $service): Response
     {
         $org = $service->getAssociationInfo();
