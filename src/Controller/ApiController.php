@@ -10,9 +10,10 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class ApiController extends AbstractController
 {
-    #[Route('/', name: 'api', methods: ['GET'],defaults: ['reactRouting' => null])]
+    #[Route('/{reactRouting}', name: 'api', methods: ['GET'],defaults: ['reactRouting' => null])]
     public function index(): Response
     {
+        
         return $this->render('api/index.html.twig');
     }
 
@@ -25,11 +26,11 @@ class ApiController extends AbstractController
         return $this->json($org);
     }
 
-    #[Route('/api/org', name: 'org', methods: ['GET'],defaults: ['reactRouting' => null])]
+    #[Route('/', name: 'org', methods: ['GET'],defaults: ['reactRouting' => null])]
     public function org(CallApiService $service): Response
     {
         $org = $service->getAssociationInfo();
-        // dd($org);
+        dd($org);
         return $this->json($org);
     }
 

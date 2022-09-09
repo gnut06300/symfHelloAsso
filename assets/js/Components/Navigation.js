@@ -10,7 +10,7 @@ const Navigation = () => {
 return (
 <Navbar bg="dark" variant="dark" expand="lg" fixed="top">
     <Container fluid>
-    <Navbar.Brand href="#">Hello Asso</Navbar.Brand>
+    <Navbar.Brand className='bg-primary' href="#"><img src='https://artprod.fr/wp-content/uploads/2021/10/Art-Prod.03-2048x683.png' height="35"/></Navbar.Brand>
     <Navbar.Toggle aria-controls="navbarScroll" />
     <Navbar.Collapse id="navbarScroll">
         <Nav
