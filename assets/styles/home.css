@@ -1,15 +1,44 @@
 .home {
-    /* background-color: rgb(255, 255, 255); */
-    /* background-color: var(--color-primary); */
     padding: 0 0 50px 0;
 }
+
 .banner {
     width: 100%;
 }
+
 .titre {
     text-align: center;
 }
+
 .description {
     font-size: 18px;
-    margin: 10px 10px 10px 30px;
+    /* margin: 10px 10px 10px 30px; */
 }
+
+.video {
+    width: 100%;
+}
+
+/* .video-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+  }
+  
+  .video-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  } */
+
+  /* .videoArtProd {
+    width: 100%;
+  } */
+
+  .videoArtProd iframe {
+    width: 640px;
+    height: 360px;
+  }

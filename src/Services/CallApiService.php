@@ -7,6 +7,8 @@ use Symfony\Contracts\HttpClient\HttpClientInterface;
 
 
 
+
+
 class CallApiService {
 
     private $client;
@@ -45,7 +47,7 @@ class CallApiService {
     public function getAssociationInfo(): array 
     {
         $org = 'artprod';
-        $resp = $this->client->request('GET', 'https://api.helloasso.com/v5/organization/'.$org, [
+        $resp = $this->client->request('GET', 'https://api.helloasso.com/v5/organizations/'.$org, [
             'headers' => [
                 'Authorization' => 'Bearer ' . $this->getAccessToken()['access_token'],
             ],

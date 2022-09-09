@@ -9,7 +9,7 @@ const Footer = () => {
 
             <div className="footer">
                 <div className="container">    
-                    <h1 className="text-center mt-5 mb-3">Footer</h1>
+                    <h1 className="text-center mt-2 mb-3">Footer</h1>
                 </div>
             </div>
     );
