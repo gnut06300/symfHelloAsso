@@ -28,35 +28,9 @@ root.render(
             </Routes>
         </Router>
         <Footer/>
-<<<<<<< HEAD
+
      </React.StrictMode>
 </div>
 );
-=======
-    </React.StrictMode>
-</div>
-);
 
-<<<<<<< HEAD
-export default function Main() {
-    
-    return (
-        <div className="app">
-            <Router>
-                <Navigation/>
-                <Routes>
-                    <Route exact path="/" element={<Home />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/contact" element={<Contact />} />
-                    <Route path="/login" element={<Login />} />
-                    <Route path="/dashboard" element={<DashBoard />} />
-                </Routes>
-            </Router>
-            <Footer/>
-        </div>
-    );
-}
-=======
->>>>>>> main
 
->>>>>>> f51fb04dc38e12184c40bbaa3953e0b765d6b3a8
