@@ -30,7 +30,7 @@ class ApiController extends AbstractController
     public function org(CallApiService $service): Response
     {
         $org = $service->getAssociationInfo();
-        dd($org);
+        //dd($org);
         return $this->json($org);
     }
 

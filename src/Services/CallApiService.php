@@ -55,7 +55,7 @@ class CallApiService {
         $statusCode = $resp->getStatusCode();  
         if ($statusCode == 200) {
             $content = $resp->toArray();
-            dd($content);
+            // dd($content);
             return $content;
         } else {
             return [];
