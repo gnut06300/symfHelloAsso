@@ -20,17 +20,16 @@ root.render(
         <Router>
             <Navigation/>
             <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/dashboard" element={<DashBoard />} />
+                <Route path="/" element={<Home/>} />
+                <Route path="/about" element={<About/>} />
+                <Route path="/contact" element={<Contact/>} />
+                <Route path="/login" element={<Login/>} />
+                <Route path="/dashboard" element={<DashBoard/>} />
             </Routes>
         </Router>
         <Footer/>
 
-     </React.StrictMode>
+
+    </React.StrictMode>
 </div>
 );
-
-
